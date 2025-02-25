@@ -4,6 +4,6 @@
 
 
 body {
-  @apply bg-[#1a1a2e] text-white;
+  @apply bg-gray-600 text-white;
 }
 
