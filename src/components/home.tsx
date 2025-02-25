@@ -11,7 +11,7 @@ const Home = () => {
         <header className="hero flex flex-col justify-center items-center bg-[#1a1a2e] border-4 border-yellow-500 p-4 w-full mb-4">
         <div className="flex items-center justify-center">
           <p className="text-yellow-500 text-8xl whitespace-nowrap">Hello!</p>
-          <p className="text-white text-8xl ml-4 whitespace-nowrap">I'm William Tyrrell</p>
+          <p className="text-white text-8xl ml-4 whitespace-nowrap">I&apos;m William Tyrrell</p>
           <section className="intro flex-1 ml-8 flex items-center">
             <div className="flex-shrink-0 ml-16">
               <Image
