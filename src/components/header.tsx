@@ -6,7 +6,7 @@ import Link from "next/link"; // Use Next.js Link instead of react-router-dom
 
 const Header = () => {
     return (
-        <header className="bg-gray-900 text-white p-8">
+        <header className="bg-black text-white p-8">
             <nav>
                 <ul className="flex justify-center gap-8">
                     <li>
