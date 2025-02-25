@@ -3,6 +3,7 @@ import "./globals.css";
 
 // import NavBar from "../components/nav/NavBar";
 import Footer from "../components/footer";
+import Header from "../components/header";
 
 export const metadata: Metadata = {
   title: "William Tyrrell", // Default title
@@ -17,9 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="" />
+      <link rel="icon" href="/headshot.jpg" />
       </head>
       <body className="flex flex-col">
+      <Header />
         {/* <div className="pb-24"> 
           <NavBar />
         </div> */}
