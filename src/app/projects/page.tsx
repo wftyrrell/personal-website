@@ -17,6 +17,24 @@ const projects = {
       repo: "https://github.com/wftyrrell/space-invaders",
       description: "Using the Texas Instruments MSP-EXP430F5529LP microcontroller, I am implementing a simple version of the game space invaders."
     },
+    {
+      name: "Embedded Oscilloscope Design",
+      image: "/personal-website/Osciloscope.png",
+      repo: "https://github.com/wftyrrell/oscilloscope-EK-TM4C1294XL",
+      description: "Using the EK-TM4C1294XL board I am creating a 1 Msps digital oscilloscope"
+    },
+    {
+      name: "Guitar Hero",
+      image: "/personal-website/guitar.png",
+      repo: "https://github.com/wftyrrell/guitar-hero",
+      description: "Using the Texas Instruments MSP-EXP430F5529LP microcontroller, I am implementing a simple version of the game guitar hero."
+    },
+    {
+      name: "Frequency Counter Embedded Oscilloscope",
+      image: "/personal-website/trigger.png",
+      repo: "https://github.com/wftyrrell/frequency_counter-audio_output",
+      description: "Using the EK-TM4C1294XL board I am adding a frequency counter and audio output functionality to the previously created digital oscilloscope"
+    },
   ],
   HDL: [
     {
@@ -30,8 +48,8 @@ const projects = {
   "Full-Stack": [
     {
       name: "Auction House App",
-      image: "/personal-website/auction_house.jpg",
-      repo: "https://github.com/wftyrrell/auction-house-app",
+      image: "/personal-website/auction.jpg",
+      repo: "https://github.com/apblanchard4/auction-house",
       description: "A full-stack auction house platform built with React and AWS Amplify."
     },
     {

@@ -62,14 +62,10 @@ const Home = () => {
             </div>
           </section>
 
-          <section className="intro flex-1 ml-8 mr-4 my-4">
+          <section className="intro flex-1 ml-8 mr-4 my-8">
             <h2 className="text-4xl font-bold text-white mb-2">About Me:</h2>
             <p className="text-white font-bold text-xl mb-2 mr-32">
               As a skilled engineer, I am passionate about exploring opportunities to develop innovative hardware and software solutions in a new college graduate position.
-            </p>
-            <p className="text-white text-lg mb-2">
-              I have expertise in software development, including embedded systems, hardware description languages (HDL), full-stack development, and AI. Additionally,
-              my hands-on experience with sensors, circuits, systems, and microcontrollers has strengthened my hardware and lab skills.
             </p>
             <p className="text-white text-lg mb-8">
               Explore my projects, resume, and work experience to see how my skills can contribute to your team’s success.
