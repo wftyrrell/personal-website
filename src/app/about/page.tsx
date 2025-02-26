@@ -22,8 +22,10 @@ const About = () => {
           <li>🟡 React.js / Next.js</li>
           <li>🟡 Node.js</li>
           <li>🟡 HTML / CSS / Tailwind</li>
-          <li>🟡 VHDL / Verilog</li>
-          <li>🟡 SQL / NoSQL</li>
+          <li>🟡 Verilog</li>
+          <li>🟡 SQL</li>
+          <li>🟡 Git</li>
+          <li>🟡 Assembly / MIPS</li>
         </ul>
       </section>
 
@@ -75,8 +77,4 @@ const About = () => {
   );
 };
 
-<<<<<<< HEAD
 export default About;
-=======
-export default About;
->>>>>>> 50e4c9f081cc2730743e0cc606b1646501cdc219
