@@ -4,7 +4,10 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+
+
 const Home = () => {
+  const basePath = '/personal-website'; // Must match `basePath` in next.config.ts    
   return (
     <div>
       <div className="home-container w-full mb-4 flex flex-col items-center bg-gray-500">
@@ -15,7 +18,7 @@ const Home = () => {
             <section className="intro flex-1 ml-8 flex items-center">
               <div className="flex-shrink-0 ml-16">
                 <Image
-                  src="/Wpi_seal.png" // Replace with the path to your photo
+                  src={`${basePath}/Wpi_seal.png`} // Replace with the path to your photo
                   alt="William Tyrrell"
                   width={120}
                   height={120}
@@ -31,7 +34,7 @@ const Home = () => {
           <section className="photo flex justify-center flex-shrink-0 my-8">
             <div className="border-4 border-red-700 rounded-full flex items-center justify-center w-[200px] h-[260px]">
               <Image
-                src="/headshot.jpg"
+                src={`${basePath}/headshot.jpg`}
                 alt="William Tyrrell"
                 width={200}
                 height={200}

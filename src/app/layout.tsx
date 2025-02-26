@@ -18,14 +18,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <link rel="icon" href="/headshot.jpg" />
+        <link rel="icon" href="/personal-website/headshot.jpg" type="image/jpeg" />
       </head>
       <body className="flex flex-col">
-      <Header />
+        <Header />
         {/* <div className="pb-24"> 
           <NavBar />
         </div> */}
-        <main className="pb-4 px-4"> 
+        <main className="pb-4 px-4">
           {children}
         </main>
         <div className="pt-4">
