@@ -65,7 +65,7 @@ const About = () => {
           Hands-on experience in Artificial Intelligence, 3D Interfaces, and System Design.
         </p>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-lg">
-          <li> 🧠 NVIDIA's Audio2Face</li>
+          <li> 🧠 NVIDIA`&apos;`s Audio2Face</li>
           <li>🧠 Unreal Engine</li>
           <li>🧠 Blender</li>
         </ul>
@@ -83,3 +83,4 @@ const About = () => {
 };
 
 export default About;
+
