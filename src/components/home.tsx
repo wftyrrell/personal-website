@@ -4,21 +4,41 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const basePath = '/personal-website'; // Must match `basePath` in next.config.ts    
 
+const featuredProjects = [
+  {
+    name: "RTOS Oscilloscope",
+      image: "/personal-website/TI_EK.jpg",
+      repo: "https://github.com/wftyrrell/oscilloscope-RTOS",
+      description: "Using the EK-TM4C1294XL board I am porting a 1 Msps digital oscilloscope, to run using a RealTime Operating System (RTOS)."
+  },
+  {
+    name: "RISC-V CPU Design",
+    image: `${basePath}/riscv_project.jpg`,
+    repo: "https://github.com/wftyrrell/riscv-cpu-design",
+    description: "A custom RISC-V CPU implemented in Verilog for FPGA deployment."
+  },
+  {
+    name: "Auction House App",
+    image: `${basePath}/auction_house.jpg`,
+    repo: "https://github.com/wftyrrell/auction-house-app",
+    description: "A full-stack auction house platform built with React and AWS Amplify."
+  }
+];
 
 const Home = () => {
-  const basePath = '/personal-website'; // Must match `basePath` in next.config.ts    
   return (
     <div>
-      <div className="home-container w-full mb-4 flex flex-col items-center bg-gray-500">
+      <div className="home-container w-full mb-4 flex flex-col items-center bg-gray-800">
         <header className="hero flex flex-col justify-center items-center bg-red border-4 border-red-800 p-4 w-full mb-4">
           <div className="flex items-center justify-center">
-            <p className="text-red-600 text-6xl  font-bold whitespace-nowrap">Hello!</p>
+            <p className="text-red-600 text-6xl font-bold whitespace-nowrap">Hello!</p>
             <p className="text-white text-6xl ml-4 whitespace-nowrap">I&apos;m William Tyrrell</p>
             <section className="intro flex-1 ml-8 flex items-center">
               <div className="flex-shrink-0 ml-16">
                 <Image
-                  src={`${basePath}/Wpi_seal.png`} // Replace with the path to your photo
+                  src={`${basePath}/Wpi_seal.png`}
                   alt="William Tyrrell"
                   width={120}
                   height={120}
@@ -27,7 +47,6 @@ const Home = () => {
               </div>
             </section>
           </div>
-
         </header>
 
         <div className="flex w-full justify-between ml-16">
@@ -44,7 +63,7 @@ const Home = () => {
           </section>
 
           <section className="intro flex-1 ml-8 mr-4 my-4">
-            <h2 className="text-4xl font-bold text-black mb-2">About Me:</h2>
+            <h2 className="text-4xl font-bold text-white mb-2">About Me:</h2>
             <p className="text-white font-bold text-xl mb-2 mr-32">
               As a skilled engineer, I am passionate about exploring opportunities to develop innovative hardware and software solutions in a new college graduate position.
             </p>
@@ -65,15 +84,41 @@ const Home = () => {
           </section>
         </div>
 
-        <section className="text-4xl font-bold projects items-center my-4">
-          <h2>Featured Projects:</h2>
-          <div className="project-list">
-            {/* Projects */}
+        {/* Featured Projects Section */}
+        <section className="text-xl font-bold projects items-center my-4">
+          <h2 className="text-white text-4xl text-center mb-8">Featured Projects:</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8">
+            {featuredProjects.map((project) => (
+              <div key={project.name} className="bg-gray-700 p-4 rounded-lg shadow-lg border border-red-500">
+                <Link href={project.repo} target="_blank">
+                  <div className="group relative cursor-pointer">
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      width={350}
+                      height={200}
+                      className="w-full h-48 object-cover rounded-lg transition-transform transform group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <p className="text-white text-xl font-bold">{project.name}</p>
+                    </div>
+                  </div>
+                </Link>
+                <h3 className="text-xl font-bold text-red-500 mt-4">{project.name}</h3>
+                <p className="text-gray-300 text-md">{project.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Link to Projects Page */}
+          <div className="mt-6 text-center">
+            <Link href="/projects" className="text-lg text-red-500 hover:underline">
+              View All Projects →
+            </Link>
           </div>
         </section>
 
-        <footer className="w-full mt-8">
-        </footer>
+        <footer className="w-full mt-8"></footer>
       </div>
     </div>
   );
