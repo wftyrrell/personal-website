@@ -25,7 +25,7 @@ const projects = {
     },
     {
       name: "Guitar Hero",
-      image: "/personal-website/guitar.png",
+      image: "/personal-website/guitar.jpg",
       repo: "https://github.com/wftyrrell/guitar-hero",
       description: "Using the Texas Instruments MSP-EXP430F5529LP microcontroller, I am implementing a simple version of the game guitar hero."
     },
@@ -56,7 +56,7 @@ const projects = {
       name: "WPI Course Tracker",
       image: "/personal-website/Wpi_seal.png",
       repo: "https://github.com/dugganm24/WPI-Course-Tracker",
-      description: "An AI-driven tool for analyzing and scoring resumes using NLP."
+      description: "Full-stack implementation of streamlined alternative to WPI tracking sheets"
     },
   ],
   Python: [

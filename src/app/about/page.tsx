@@ -95,7 +95,7 @@ const About = () => {
       <section className="mb-10">
         <h1 className="text-5xl font-bold text-red-500 mb-4">About Me</h1>
         <p className="text-lg mb-4 text-gray-300">
-          I am a BS Electrical and Computer Engineering and a Master`&apos;`s of Computer Science stuent at Worcester Polytechnic Institue (WPI).
+          I am a BS Electrical and Computer Engineering and a Master&apos;s of Computer Science stuent at Worcester Polytechnic Institue (WPI).
           I will be graduating in May 2025 and am actively looking for an Entry-Level Full time Job.
           I have expertise in software development, including embedded systems, hardware description languages (HDL), and full-stack development. Additionally,
           I have hands-on experience with sensors, circuits, systems, and microcontrollers that has strengthened my hardware and lab skills.
