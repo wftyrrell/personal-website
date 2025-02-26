@@ -53,16 +53,33 @@ const projects = {
       description: "A full-stack auction house platform built with React and AWS Amplify."
     },
     {
-      name: "AI-Powered Resume Analyzer",
-      image: "/personal-website/resume_analyzer.jpg",
-      repo: "https://github.com/wftyrrell/ai-resume-analyzer",
+      name: "WPI Course Tracker",
+      image: "/personal-website/Wpi_seal.png",
+      repo: "https://github.com/dugganm24/WPI-Course-Tracker",
       description: "An AI-driven tool for analyzing and scoring resumes using NLP."
+    },
+  ],
+  Python: [
+    {
+      name: "Binary Classification",
+      image: "/personal-website/melanoma.png",
+      repo: "https://github.com/wftyrrell/Binary-classification-on-melanoma-and-naevus-images",
+      description: "This Project Implements a Binary classification of images of melanoma and naevus"
+    },
+  ],
+  Other: [
+    {
+      name: "Major Qualifying Project",
+      image: "/personal-website/a2f.jpg",
+      repo: "https://github.com/dugganm24/MQP",
+      description: "Full-stack Implementation of streamlined alternative to WPI tracking sheets"
     },
   ],
 };
 
+
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState<"Embedded" | "HDL" | "Full-Stack">(
+  const [activeTab, setActiveTab] = useState<"Embedded" | "HDL" | "Full-Stack" | "Python" | "Other">(
     "Embedded"
   );
 
@@ -75,7 +92,7 @@ const Projects = () => {
         {Object.keys(projects).map((category) => (
           <button
             key={category}
-            onClick={() => setActiveTab(category as "Embedded" | "HDL" | "Full-Stack")}
+            onClick={() => setActiveTab(category as "Embedded" | "HDL" | "Full-Stack" | "Python" | "Other")}
             className={`px-4 py-2 rounded-md text-lg font-semibold ${
               activeTab === category ? "bg-red-600 text-black" : "bg-gray-700 text-white"
             } transition-all duration-300`}

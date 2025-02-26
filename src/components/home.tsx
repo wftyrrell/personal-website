@@ -9,28 +9,28 @@ const basePath = '/personal-website'; // Must match `basePath` in next.config.ts
 const featuredProjects = [
   {
     name: "RTOS Oscilloscope",
-      image: "/personal-website/TI_EK.jpg",
-      repo: "https://github.com/wftyrrell/oscilloscope-RTOS",
-      description: "Using the EK-TM4C1294XL board I am porting a 1 Msps digital oscilloscope, to run using a RealTime Operating System (RTOS)."
-  },
-  {
-    name: "RISC-V CPU Design",
-    image: `${basePath}/riscv_project.jpg`,
-    repo: "https://github.com/wftyrrell/riscv-cpu-design",
-    description: "A custom RISC-V CPU implemented in Verilog for FPGA deployment."
+    image: "/personal-website/TI_EK.jpg",
+    repo: "https://github.com/wftyrrell/oscilloscope-RTOS",
+    description: "Using the EK-TM4C1294XL board I am porting a 1 Msps digital oscilloscope, to run using a RealTime Operating System (RTOS)."
   },
   {
     name: "Auction House App",
-    image: `${basePath}/auction_house.jpg`,
-    repo: "https://github.com/wftyrrell/auction-house-app",
+    image: "/personal-website/auction.jpg",
+    repo: "https://github.com/apblanchard4/auction-house",
     description: "A full-stack auction house platform built with React and AWS Amplify."
+  },
+  {
+    name: "Major Qualifying Project",
+    image: "/personal-website/a2f.jpg",
+    repo: "https://github.com/dugganm24/MQP",
+    description: "This project focuses on generating realistic human facial video and mapping it onto a 3D surface to create expressive, lip-synced animations. "
   }
 ];
 
 const Home = () => {
   return (
     <div>
-      <div className="home-container w-full mb-4 flex flex-col items-center bg-gray-800">
+      <div className="home-container w-full mb-4 flex flex-col items-center">
         <header className="hero flex flex-col justify-center items-center bg-red border-4 border-red-800 p-4 w-full mb-4">
           <div className="flex items-center justify-center">
             <p className="text-red-600 text-6xl font-bold whitespace-nowrap">Hello!</p>
