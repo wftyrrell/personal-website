@@ -29,92 +29,84 @@ const featuredProjects = [
 
 const Home = () => {
   return (
-    <div>
-      <div className="home-container w-full mb-4 flex flex-col items-center">
-        <header className="hero flex flex-col justify-center items-center bg-red border-4 border-red-800 p-4 w-full mb-4">
-          <div className="flex items-center justify-center">
-            <p className="text-red-600 text-6xl font-bold whitespace-nowrap">Hello!</p>
-            <p className="text-white text-6xl ml-4 whitespace-nowrap">I&apos;m William Tyrrell</p>
-            <section className="intro flex-1 ml-8 flex items-center">
-              <div className="flex-shrink-0 ml-16">
-                <Image
-                  src={`${basePath}/Wpi_seal.png`}
-                  alt="William Tyrrell"
-                  width={120}
-                  height={120}
-                  className="rounded-full"
-                />
-              </div>
-            </section>
-          </div>
-        </header>
-
-        <div className="flex w-full justify-between ml-16">
-          <section className="photo flex justify-center flex-shrink-0 my-8">
-            <div className="border-4 border-red-700 rounded-full flex items-center justify-center w-[200px] h-[260px]">
-              <Image
-                src={`${basePath}/headshot.jpg`}
-                alt="William Tyrrell"
-                width={200}
-                height={200}
-                className="rounded-full"
-              />
-            </div>
-          </section>
-
-          <section className="intro flex-1 ml-8 mr-4 my-16">
-            <p className="text-white font-bold text-xl mb-2 mr-32">
-              As a skilled engineer, I am passionate about exploring opportunities to develop innovative hardware and software solutions in a new college graduate position.
-            </p>
-            <p className="text-white text-lg mb-8 my-4">
-              Explore my projects, resume, and work experience to see how my skills can contribute to your team’s success.
-            </p>
-            <div className="">
-              <Link href="/Resume.pdf" legacyBehavior>
-                <a className="bg-red-600 text-black text-2xl font-bold py-2 px-8 rounded-full hover:bg-red-900 transition duration-300">
-                  View My Resume
-                </a>
-              </Link>
-            </div>
-          </section>
+    <div className="w-full max-w-7xl mx-auto px-4"> {/* Added max-width and centering for desktop */}
+      <header className="hero flex flex-col items-center bg-red border-8 border-red-800 p-4 w-full mb-4 text-center max-w-4xl mx-auto"> {/* Limited max-width for desktop */}
+        <p className="text-red-600 text-5xl sm:text-6xl font-bold">Hello!</p>
+        <p className="text-white text-3xl sm:text-6xl mt-2">I&apos;m William Tyrrell</p>
+        <div className="mt-4">
+          <Image
+            src={`${basePath}/Wpi_seal.png`}
+            alt="William Tyrrell"
+            width={100}
+            height={100}
+            className="rounded-full"
+          />
         </div>
+      </header>
 
-        {/* Featured Projects Section */}
-        <section className="text-xl font-bold projects items-center my-4">
-          <h2 className="text-white text-4xl text-center mb-8">Featured Projects:</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8">
-            {featuredProjects.map((project) => (
-              <div key={project.name} className="bg-gray-700 p-4 rounded-lg shadow-lg border border-red-500">
-                <Link href={project.repo} target="_blank">
-                  <div className="group relative cursor-pointer">
-                    <Image
-                      src={project.image}
-                      alt={project.name}
-                      width={350}
-                      height={200}
-                      className="w-full h-48 object-cover rounded-lg transition-transform transform group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <p className="text-white text-xl font-bold">{project.name}</p>
-                    </div>
-                  </div>
-                </Link>
-                <h3 className="text-xl font-bold text-red-500 mt-4">{project.name}</h3>
-                <p className="text-gray-300 text-md">{project.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Link to Projects Page */}
-          <div className="mt-6 text-center">
-            <Link href="/projects" className="text-lg text-red-500 hover:underline">
-              View All Projects →
-            </Link>
+      <div className="flex flex-col md:flex-row w-full items-center justify-center md:justify-between mb-8 max-w-5xl mx-auto"> {/* Adjusted width */}
+        <section className="flex justify-center my-6 md:my-8">
+          <div className="border-4 border-red-700 rounded-full flex items-center justify-center w-40 h-40 md:w-[190px] md:h-[250px] ml-32"> {/* Reduced size */}
+            <Image
+              src={`${basePath}/headshot.jpg`}
+              alt="William Tyrrell"
+              width={180}
+              height={180}
+              className="rounded-full"
+            />
           </div>
         </section>
 
-        <footer className="w-full mt-8"></footer>
+        <section className="text-center md:text-left px-4 max-w-lg"> {/* Limited text width */}
+          <p className="text-white font-bold text-lg md:text-xl mb-4">
+            As a skilled engineer, I am passionate about exploring opportunities to develop innovative hardware and software solutions in a new college graduate position.
+          </p>
+          <p className="text-white text-md md:text-lg mb-6">
+            Explore my projects, resume, and work experience to see how my skills can contribute to your team’s success.
+          </p>
+          <Link href="/Resume.pdf" legacyBehavior>
+            <a className="bg-red-600 text-black text-xl font-bold py-2 px-6 rounded-full hover:bg-red-900 transition duration-300 inline-block">
+              View My Resume
+            </a>
+          </Link>
+        </section>
       </div>
+
+      {/* Featured Projects Section */}
+      <section className="text-center my-6 max-w-6xl mx-auto"> {/* Centering and width limit */}
+        <h2 className="text-white text-3xl sm:text-4xl mb-6">Featured Projects</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
+          {featuredProjects.map((project) => (
+            <div key={project.name} className="bg-gray-700 p-4 rounded-lg shadow-lg border border-red-500">
+              <Link href={project.repo} target="_blank">
+                <div className="group relative cursor-pointer">
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    width={280}
+                    height={160}
+                    className="w-full h-40 object-cover rounded-lg transition-transform transform group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p className="text-white text-xl font-bold">{project.name}</p>
+                  </div>
+                </div>
+              </Link>
+              <h3 className="text-xl font-bold text-red-500 mt-4">{project.name}</h3>
+              <p className="text-gray-300 text-md">{project.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Link to Projects Page */}
+        <div className="mt-6">
+          <Link href="/projects" className="text-lg text-red-500 hover:underline">
+            View All Projects →
+          </Link>
+        </div>
+      </section>
+
+      <footer className="w-full mt-8"></footer>
     </div>
   );
 };
