@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const basePath = '/personal-website'; // Must match `basePath` in next.config.ts    
+  
 
 const featuredProjects = [
   {
@@ -29,26 +29,26 @@ const featuredProjects = [
 
 const Home = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4"> {/* Added max-width and centering for desktop */}
-      <header className="hero flex flex-col items-center bg-red border-8 border-red-800 p-4 w-full mb-4 text-center max-w-4xl mx-auto"> {/* Limited max-width for desktop */}
-        <p className="text-red-600 text-5xl sm:text-6xl font-bold">Hello!</p>
-        <p className="text-white text-3xl sm:text-6xl mt-2">I&apos;m William Tyrrell</p>
-        <div className="mt-4">
-          <Image
-            src={`${basePath}/Wpi_seal.png`}
-            alt="William Tyrrell"
-            width={100}
-            height={100}
-            className="rounded-full"
-          />
-        </div>
-      </header>
-
-      <div className="flex flex-col md:flex-row w-full items-center justify-center md:justify-between mb-8 max-w-5xl mx-auto"> {/* Adjusted width */}
-        <section className="flex justify-center my-6 md:my-8">
-          <div className="border-4 border-red-700 rounded-full flex items-center justify-center w-40 h-40 md:w-[180px] md:h-[220px]"> {/* Reduced size */}
+    <div className="py-4 lg:py-24">
+      <div className="flex flex-col lg:flex-row w-full items-center justify-center lg:justify-between mb-8 max-w-5xl mx-auto flex-wrap">
+        <header className="flex flex-col items-center lg:items-start lg:w-1/2 bg-red border-8 border-red-800 p-2 w-full mb-4 lg:mb-0">
+          <p className="text-red-600 text-5xl sm:text-6xl font-bold">Hello!</p>
+          <p className="text-white text-3xl sm:text-6xl mt-2">I&apos;m William Tyrrell</p>
+          <div className="mt-4 justify-center items-center">
             <Image
-              src={`${basePath}/headshot.jpg`}
+              src="/Wpi_seal.png"
+              alt="William Tyrrell"
+              width={100}
+              height={100}
+              className="rounded-full"
+            />
+          </div>
+        </header>
+
+        <section className="flex justify-center my-6 md:my-8 lg:w-1/2">
+          <div className="border-4 border-red-700 rounded-full flex items-center justify-center w-40 h-40 md:w-[200px] md:h-[250px]">
+            <Image
+              src="/headshot.jpg"
               alt="William Tyrrell"
               width={180}
               height={180}
@@ -57,7 +57,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="text-center md:text-left px-4 max-w-lg"> {/* Limited text width */}
+        <section className="text-center md:text-left max-w-4xl lg:w-full my-4">
           <p className="text-white font-bold text-lg md:text-xl mb-4">
             As a skilled engineer, I am passionate about exploring opportunities to develop innovative hardware and software solutions in a new college graduate position.
           </p>
