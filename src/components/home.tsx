@@ -36,7 +36,7 @@ const Home = () => {
           <p className="text-white text-3xl sm:text-6xl mt-2">I&apos;m William Tyrrell</p>
           <div className="mt-4 justify-center items-center">
             <Image
-              src="/Wpi_seal.png"
+              src="/personal-website/Wpi_seal.png"
               alt="William Tyrrell"
               width={100}
               height={100}
@@ -48,7 +48,7 @@ const Home = () => {
         <section className="flex justify-center my-6 md:my-8 lg:w-1/2">
           <div className="border-4 border-red-700 rounded-full flex items-center justify-center w-40 h-40 md:w-[200px] md:h-[250px]">
             <Image
-              src="/headshot.jpg"
+              src="/personal-website/headshot.jpg"
               alt="William Tyrrell"
               width={180}
               height={180}
