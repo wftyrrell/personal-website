@@ -46,7 +46,7 @@ const Home = () => {
 
       <div className="flex flex-col md:flex-row w-full items-center justify-center md:justify-between mb-8 max-w-5xl mx-auto"> {/* Adjusted width */}
         <section className="flex justify-center my-6 md:my-8">
-          <div className="border-4 border-red-700 rounded-full flex items-center justify-center w-40 h-40 md:w-[190px] md:h-[250px] ml-32"> {/* Reduced size */}
+          <div className="border-4 border-red-700 rounded-full flex items-center justify-center w-40 h-40 md:w-[180px] md:h-[220px]"> {/* Reduced size */}
             <Image
               src={`${basePath}/headshot.jpg`}
               alt="William Tyrrell"
