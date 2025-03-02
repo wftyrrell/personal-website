@@ -48,7 +48,7 @@ const Home = () => {
         <section className="flex justify-center">
           <div className="w-full relative h-auto p-1 border-8 border-red-800 rounded-full max-w-sm mx-auto">
             <Image
-              src="/headshot.jpg"
+              src="/personal-website/headshot.jpg"
               alt="William Tyrrell"
               className="rounded-full max-w-full h-auto"
               width={220}
