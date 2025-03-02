@@ -17,10 +17,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* ✅ Correct Favicon Path */}
-        <link rel="icon" href="/headshot.jpg" type="image/jpeg" />
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      {/* ✅ Full Page Flexbox Layout to Stick Footer to Bottom */}
       <body className="flex flex-col min-h-screen bg-gray-900 text-white">
         <Header />
         <main className="flex-1 pb-4 px-4">{children}</main>
