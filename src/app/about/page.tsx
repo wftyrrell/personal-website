@@ -144,6 +144,24 @@ const About = () => {
         </div>
       </div>
 
+      {/* Professional Experience Section */}
+      <section className="mt-12">
+        <h2 className="text-4xl font-bold text-red-500 mb-6">Professional Experience</h2>
+        <div className="space-y-6">
+          {experience.map((job) => (
+            <div key={job.title} className="bg-gray-800 p-6 rounded-lg shadow-lg border border-red-500">
+              <h3 className="text-2xl font-semibold text-red-500">{job.title}</h3>
+              <p className="text-lg text-gray-300">{job.company} | {job.duration}</p>
+              <ul className="list-disc pl-6 mt-3 text-gray-300">
+                {job.responsibilities.map((responsibility, index) => (
+                  <li key={index}>{responsibility}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Back to Home */}
       <div className="mt-8">
         <Link href="/" className="text-lg text-red-500 hover:underline">← Back to Home</Link>
