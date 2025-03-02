@@ -45,14 +45,14 @@ const Home = () => {
           </div>
         </header>
 
-        <section className="flex justify-center my-6 md:my-8 lg:w-1/2">
-          <div className="border-4 border-red-700 rounded-full flex items-center justify-center w-40 h-40 md:w-[200px] md:h-[250px]">
+        <section className="flex justify-center">
+          <div className="w-full relative h-auto p-1 border-8 border-red-800 rounded-full max-w-sm mx-auto">
             <Image
-              src="/personal-website/headshot.jpg"
+              src="/headshot.jpg"
               alt="William Tyrrell"
-              width={180}
-              height={180}
-              className="rounded-full"
+              className="rounded-full max-w-full h-auto"
+              width={220}
+              height={220}
             />
           </div>
         </section>
@@ -106,7 +106,15 @@ const Home = () => {
         </div>
       </section>
 
-      <footer className="w-full mt-8"></footer>
+      <section className="flex justify-center">
+        <div className="relative h-auto  max-w-sm mx-auto">
+          <div className="flex items-center justify-center border-8 border-gray-500 rounded-full w-40 h-40">
+            <span className="text-red-600 text-7xl font-bold">WT</span>
+          </div>
+        </div>
+      </section>
+
+      <footer className="w-full"></footer>
     </div>
   );
 };

@@ -44,7 +44,7 @@ const Contact = () => {
             </a>
           </li>
           <li>
-            🏢 Location: Worcester, MA | Looking for In-Person Opportunities in the Northesat
+            🏢 Location: Worcester, MA | Looking for In-Person Opportunities in the Northeast
           </li>
         </ul>
       </div>
