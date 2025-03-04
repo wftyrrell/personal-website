@@ -74,6 +74,12 @@ const projects = {
       repo: "https://github.com/dugganm24/MQP",
       description: "This project focuses on generating realistic human facial video and mapping it onto a 3D surface to create expressive, lip-synced animations."
     },
+    {
+      name: "Smart Trash Can Design",
+      image: "/personal-website/trash.png",
+      repo: "/trash_report.pdf",
+      description: "Piloted a group of three in the Design of a Smart Trash Can. Design successfully implemented a weigh functionality for the trash within +/- 0.1% accuracy solving a local problem for trash weight limits"
+    },
   ],
 };
 
