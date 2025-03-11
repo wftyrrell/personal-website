@@ -26,6 +26,11 @@ const Header = () => {
                             <span className="hover:text-gray-400 cursor-pointer">Contact</span>
                         </Link>
                     </li>
+                    <li>
+                        <Link href="/mini-games" passHref>
+                            <span className="hover:text-gray-400 cursor-pointer">Mini-Games</span>
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>

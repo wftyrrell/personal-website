@@ -25,7 +25,7 @@ const projects = {
     },
     {
       name: "Guitar Hero",
-      image: "/personal-website/guitar.png",
+      image: "/personal-website/guitar.jpg",
       repo: "https://github.com/wftyrrell/guitar-hero",
       description: "Using the Texas Instruments MSP-EXP430F5529LP microcontroller, I am implementing a simple version of the game guitar hero."
     },
@@ -53,16 +53,39 @@ const projects = {
       description: "A full-stack auction house platform built with React and AWS Amplify."
     },
     {
-      name: "AI-Powered Resume Analyzer",
-      image: "/personal-website/resume_analyzer.jpg",
-      repo: "https://github.com/wftyrrell/ai-resume-analyzer",
-      description: "An AI-driven tool for analyzing and scoring resumes using NLP."
+      name: "WPI Course Tracker",
+      image: "/personal-website/Wpi_seal.png",
+      repo: "https://github.com/dugganm24/WPI-Course-Tracker",
+      description: "Full-stack implementation of streamlined alternative to WPI tracking sheets"
+    },
+  ],
+  Python: [
+    {
+      name: "Binary Classification",
+      image: "/personal-website/melanoma.png",
+      repo: "https://github.com/wftyrrell/Binary-classification-on-melanoma-and-naevus-images",
+      description: "This Project Implements a Binary classification of images of melanoma and naevus"
+    },
+  ],
+  Other: [
+    {
+      name: "Major Qualifying Project",
+      image: "/personal-website/a2f.jpg",
+      repo: "https://github.com/dugganm24/MQP",
+      description: "This project focuses on generating realistic human facial video and mapping it onto a 3D surface to create expressive, lip-synced animations."
+    },
+    {
+      name: "Smart Trash Can Design",
+      image: "/personal-website/trash.png",
+      repo: "/trash_report.pdf",
+      description: "Piloted a group of three in the Design of a Smart Trash Can. Design successfully implemented a weigh functionality for the trash within +/- 0.1% accuracy solving a local problem for trash weight limits"
     },
   ],
 };
 
+
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState<"Embedded" | "HDL" | "Full-Stack">(
+  const [activeTab, setActiveTab] = useState<"Embedded" | "HDL" | "Full-Stack" | "Python" | "Other">(
     "Embedded"
   );
 
@@ -70,19 +93,23 @@ const Projects = () => {
     <div className="max-w-5xl mx-auto p-8 bg-gray-900 text-white">
       <h1 className="text-5xl font-bold text-white mb-6">My Projects</h1>
 
-      {/* Tabs Navigation */}
-      <div className="flex space-x-4 mb-6">
-        {Object.keys(projects).map((category) => (
-          <button
-            key={category}
-            onClick={() => setActiveTab(category as "Embedded" | "HDL" | "Full-Stack")}
-            className={`px-4 py-2 rounded-md text-lg font-semibold ${
-              activeTab === category ? "bg-red-600 text-black" : "bg-gray-700 text-white"
-            } transition-all duration-300`}
-          >
-            {category}
-          </button>
-        ))}
+      {/* Tabs Navigation (Scrollable) */}
+      <div className="relative mb-6">
+        <div className="overflow-x-auto whitespace-nowrap custom-scrollbar">
+          <div className="flex space-x-4 min-w-max">
+            {Object.keys(projects).map((category) => (
+              <button
+                key={category}
+                onClick={() => setActiveTab(category as "Embedded" | "HDL" | "Full-Stack" | "Python" | "Other")}
+                className={`px-4 py-2 rounded-md text-lg font-semibold transition-all duration-300 ${
+                  activeTab === category ? "bg-red-600 text-black" : "bg-gray-700 text-white"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Project Display */}
@@ -111,8 +138,31 @@ const Projects = () => {
       <div className="mt-8">
         <Link href="/" className="text-lg text-red-500 hover:underline">← Back to Home</Link>
       </div>
+
+      {/* Custom Scrollbar Styling */}
+      <style jsx>{`
+        .custom-scrollbar::-webkit-scrollbar {
+          height: 8px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: #2d2d2d;
+          border-radius: 10px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #e63946;
+          border-radius: 10px;
+          border: 2px solid #2d2d2d;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #ff4d6d;
+        }
+      `}</style>
     </div>
   );
 };
 
 export default Projects;
+

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-// import NavBar from "../components/nav/NavBar";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
 export const metadata: Metadata = {
   title: "William Tyrrell", // Default title
-  description: "Default description for my website.",
+  description: "Portfolio website of William Tyrrell.",
 };
 
 export default function RootLayout({
@@ -18,19 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/personal-website/headshot.jpg" type="image/jpeg" />
+      <link rel="icon" href="/personal-website/favicon.ico" sizes="any" />
       </head>
-      <body className="flex flex-col">
+      <body className="flex flex-col min-h-screen bg-gray-900 text-white">
         <Header />
-        {/* <div className="pb-24"> 
-          <NavBar />
-        </div> */}
-        <main className="pb-4 px-4">
-          {children}
-        </main>
-        <div className="pt-4">
-          <Footer />
-        </div>
+        <main className="flex-1 pb-4 px-4">{children}</main>
+        <Footer />
       </body>
     </html>
   );
