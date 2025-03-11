@@ -14,10 +14,10 @@ const featuredProjects = [
     description: "Using the EK-TM4C1294XL board I am porting a 1 Msps digital oscilloscope, to run using a RealTime Operating System (RTOS)."
   },
   {
-    name: "Auction House App",
-    image: "/personal-website/auction.jpg",
-    repo: "https://github.com/apblanchard4/auction-house",
-    description: "A full-stack auction house platform built with React and AWS Amplify."
+    name: "FPGA-Based Light Sensor Reading",
+    image: "/personal-website/Basys3.jpg",
+    repo: "https://github.com/wftyrrell/light-sensor",
+    description: "This project is designed for the Basys 3 development board and involves interfacing with a PMOD ALS (Ambient Light Sensor) module using SPI communication. The light sensor readings are displayed on the seven-segment display of the Basys 3 board. Features include a two stage synchronizer for removing metastability."
   },
   {
     name: "Major Qualifying Project",

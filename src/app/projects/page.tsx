@@ -38,7 +38,7 @@ const projects = {
   ],
   HDL: [
     {
-      name: "Light Sensor Reading",
+      name: "FPGA-Based Light Sensor Reading",
       image: "/personal-website/Basys3.jpg",
       repo: "https://github.com/wftyrrell/light-sensor",
       description: "This project is designed for the Basys 3 development board and involves interfacing with a PMOD ALS (Ambient Light Sensor) module using SPI communication. The light sensor readings are displayed on the seven-segment display of the Basys 3 board. Features include a two stage synchronizer for removing metastability."
